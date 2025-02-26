@@ -20,7 +20,7 @@ export default function FlexboxPage() {
           </p>
 
           <p>
-            los elementos con display block se colocaban uno debajo del otro
+            los elementos con display block se colocan uno debajo del otro
           </p>
           <div className="p-6 rounded-lg shadow-lg max-w-md border-2 border-dashed border-gray-400 bg-orange-500/20">
             <div className="space-y-4 [&>div]:block [&>div]:p-6 [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  m-10 bg-black">
@@ -30,8 +30,8 @@ export default function FlexboxPage() {
             </div>
           </div>
           <p>
-            al usar display block-inline, los elementos se colocaban uno a la
-            izquierda del otro
+            al usar display block-inline, los elementos se colocan uno a la derecha del otro
+            
           </p>
           <div className="p-6 rounded-lg shadow-lg max-w-lg border-2 border-dashed border-gray-400 bg-orange-500/20">
             <div className="space-x-4 [&>div]:inline-block [&>div]:p-6 [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  bg-black w-full">
@@ -48,7 +48,7 @@ export default function FlexboxPage() {
 
           <p>
             Flex-box es un sistema de diseño de contenidos que permite a los
-            elementos de contenidos de ser alineados en filas y columnas.
+            elementos alinearse en filas o columnas definiendo un eje de alineación principal y otro secundario.
           </p>
           <p>
             Esto permite a los elementos de contenidos de ser alineados de
