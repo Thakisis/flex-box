@@ -1,7 +1,7 @@
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link,ViewTransitions } from 'next-view-transitions'
+import { Link } from 'next-view-transitions'
 export default function HomePage() {
   
 
