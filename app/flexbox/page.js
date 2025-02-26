@@ -20,7 +20,8 @@ export default function FlexboxPage() {
           </p>
 
           <p>
-            los elementos con display block se colocan uno debajo del otro
+            Flujo de bloques (block): Los elementos con display: block se
+            colocan uno debajo del otro.
           </p>
           <div className="p-6 rounded-lg shadow-lg max-w-md border-2 border-dashed border-gray-400 bg-orange-500/20">
             <div className="space-y-4 [&>div]:block [&>div]:p-6 [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  m-10 bg-black">
@@ -30,8 +31,9 @@ export default function FlexboxPage() {
             </div>
           </div>
           <p>
-            al usar display block-inline, los elementos se colocan uno a la derecha del otro
-            
+            Flujo en línea (inline): Los elementos con display: inline o
+            display: inline-block se colocan uno al lado del otro en una misma
+            línea.
           </p>
           <div className="p-6 rounded-lg shadow-lg max-w-lg border-2 border-dashed border-gray-400 bg-orange-500/20">
             <div className="space-x-4 [&>div]:inline-block [&>div]:p-6 [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  bg-black w-full">
@@ -41,22 +43,28 @@ export default function FlexboxPage() {
             </div>
           </div>
         </section>
-        <section className="space-y-4">
+        <section className="space-y-4 mb-12">
           <h2 className="text-2xl  underline decoration-wavy decoration-orange-500 underline-offset-[3px] bold mb-2">
             Caracteristicas de flex-box
           </h2>
 
           <p>
-            Flex-box es un sistema de diseño de contenidos que permite a los
-            elementos alinearse en filas o columnas definiendo un eje de alineación principal y otro secundario.
+            Flexbox es un sistema de diseño que permite alinear elementos en
+            filas o columnas, definiendo un eje de alineación principal y otro
+            secundario.
+            <br />
           </p>
           <p>
-            Esto permite a los elementos de contenidos de ser alineados de
-            manera flexible y dinámica, lo que resulta útil para crear diseños
-            de interfaz de usuario (UI) que se adapten a diferentes tamaños de
-            pantalla y resoluciones de pantalla.
+            Esto permite que los elementos se alineen de manera flexible y
+            dinámica, lo cual es útil para crear interfaces de usuario (UI)
+            adaptables a diferentes tamaños y resoluciones de pantalla.
+          
           </p>
-
+          </section>
+          <section className="space-y-4 mb-12">
+          <h2 className="text-2xl  underline decoration-wavy decoration-orange-500 underline-offset-[3px] bold mb-2">
+            Ejemplos de uso
+          </h2>
           <div className="grid grid-cols-2 gap-4 items-center place-items-center">
             <div>
               <h3 className="w-full p-2 text-center">
