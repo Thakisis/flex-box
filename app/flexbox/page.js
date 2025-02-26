@@ -7,7 +7,7 @@ export default function FlexboxPage() {
 
       <main className="m-10 font-[family-name:var(--font-geist-sans)] ">
         <section className="space-y-4 mb-12">
-          <h2 className="text-2xl  underline decoration-wavy decoration-orange-500 underline-offset-[3px] bold mb-2">
+          <h2 className="text-2xl  underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] bold mb-2">
             Porque flex-box
           </h2>
           <p>
@@ -18,33 +18,36 @@ export default function FlexboxPage() {
             Uno era el flujo de bloques (block) y el otro era el flujo de
             columnas( inline).
           </p>
-
-          <p>
-            Flujo de bloques (block): Los elementos con display: block se
-            colocan uno debajo del otro.
-          </p>
-          <div className="p-6 rounded-lg shadow-lg max-w-md border-2 border-dashed border-gray-400 bg-orange-500/20">
-            <div className="space-y-4 [&>div]:block [&>div]:p-6 [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  m-10 bg-black">
-              <div>Elemento 1</div>
-              <div>Elemento 2</div>
-              <div>Elemento 3</div>
+          <div className="p-6 space-y-4">
+            <p>
+              Flujo de bloques (block): Los elementos con display: block se
+              colocan uno debajo del otro.
+            </p>
+            <div className="p-6 rounded-lg shadow-lg max-w-md border-2 border-dashed border-gray-400 bg-orange-500/20">
+              <div className="space-y-4 [&>div]:block [&>div]:p-6 [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  m-10 bg-black">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+              </div>
             </div>
           </div>
-          <p>
-            Flujo en línea (inline): Los elementos con display: inline o
-            display: inline-block se colocan uno al lado del otro en una misma
-            línea.
-          </p>
-          <div className="p-6 rounded-lg shadow-lg max-w-lg border-2 border-dashed border-gray-400 bg-orange-500/20">
-            <div className="space-x-4 [&>div]:inline-block [&>div]:p-6 [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  bg-black w-full">
-              <div>Elemento 1</div>
-              <div>Elemento 2</div>
-              <div>Elemento 3</div>
+          <div className="p-6 space-y-4">
+            <p>
+              Flujo en línea (inline): Los elementos con display: inline o
+              display: inline-block se colocan uno al lado del otro en una misma
+              línea.
+            </p>
+            <div className="p-6 rounded-lg shadow-lg max-w-lg border-2 border-dashed border-gray-400 bg-orange-500/20">
+              <div className="space-x-4 [&>div]:inline-block [&>div]:p-6 [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  bg-black w-full">
+                <div>Elemento 1</div>
+                <div>Elemento 2</div>
+                <div>Elemento 3</div>
+              </div>
             </div>
           </div>
         </section>
         <section className="space-y-4 mb-12">
-          <h2 className="text-2xl  underline decoration-wavy decoration-orange-500 underline-offset-[3px] bold mb-2">
+          <h2 className="text-2xl  underline   decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] bold mb-2">
             Caracteristicas de flex-box
           </h2>
 
@@ -58,11 +61,10 @@ export default function FlexboxPage() {
             Esto permite que los elementos se alineen de manera flexible y
             dinámica, lo cual es útil para crear interfaces de usuario (UI)
             adaptables a diferentes tamaños y resoluciones de pantalla.
-          
           </p>
-          </section>
-          <section className="space-y-4 mb-12">
-          <h2 className="text-2xl  underline decoration-wavy decoration-orange-500 underline-offset-[3px] bold mb-2">
+        </section>
+        <section className="space-y-4 mb-12">
+          <h2 className="text-2xl  underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] bold mb-2">
             Ejemplos de uso
           </h2>
           <div className="grid grid-cols-2 gap-4 items-center place-items-center">
