@@ -7,7 +7,7 @@ export function PopoverProperty({ value = "row", property = 'flex-direction', li
 
     return (
         <Popover align="end" >
-            <PopoverTrigger>
+            <PopoverTrigger className="hover:text-orange-500 hover:underline">
 
                 {value}
             </PopoverTrigger>

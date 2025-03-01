@@ -1,6 +1,5 @@
 import { ButtonNext } from "@/components/button-next";
 import { FlexWidget } from "@/components/flex-widget";
-import { CssProperty } from "@/components/css-property";
 
 export default function GapPage() {
 	return (
@@ -32,34 +31,17 @@ export default function GapPage() {
 				</section>
 				<section>
 					<div className="p-6 space-y-4">
-						<FlexWidget codetitle="propiedad gap" codeSize={"w-[15rem]"}>
-							<div className="font-mono text-sm">
-								<div className="leading-6 h-4 "></div>
-								<div className="leading-6  ">
-									<span className="text-blue-300">.container</span>
-									<span className="text-gray-300"> {"{"}</span>
-								</div>
-								<div className="leading-6  pl-4 grayscale opacity-50">
-									<span className="text-violet-300">display</span>
-									<span className="text-gray-300">: </span>
-									<span className="text-emerald-300">flex</span>
-									<span className="text-gray-300">;</span>
-								</div>
-								<div className="leading-6  pl-4">
-									<span className="text-violet-300">gap</span>
-									<span className="text-gray-300">: </span>
-									<span className="text-emerald-300">
-										<CssProperty property="gap" />
-									</span>
-									<span className="text-gray-300">;</span>
-								</div>
-
-								<div className="leading-6  ">
-									<span className="text-gray-300">{"}"}</span>
-								</div>
-								<div className="leading-6 h-4 "></div>
-							</div>
-						</FlexWidget>
+						<FlexWidget
+							codetitle="propiedad gap"
+							codeSize={"w-[15rem]"}
+							code={`
+								/* Click en las propiedades
+								coloreadas para editarlas */
+							.container {
+    							display:flex; 
+    							gap: <-property:gap"value:210px->;
+							}`}
+						></FlexWidget>
 					</div>
 				</section>
 			</main>

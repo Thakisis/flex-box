@@ -12,7 +12,7 @@ export function CssProperty({ property, children }) {
         'flex-direction': <FlexDirection />
     }
 
-    return components[property] ?? <span className="text-emerald-300">{property}</span>
+    return components[property] ?? <span className="text-emerald-300">{property}{value}</span>
 }
 
 

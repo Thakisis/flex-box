@@ -1,6 +1,5 @@
 import { ButtonNext } from "@/components/button-next";
 import { FlexWidget } from "@/components/flex-widget";
-import { CssProperty } from "@/components/css-property";
 
 export default function FlexboxPage() {
 	return (
@@ -72,41 +71,17 @@ export default function FlexboxPage() {
 				</section>
 				<section>
 					<div className="p-6 space-y-4">
-						<FlexWidget codetitle="propiedad flex-wrap" codeSize={"w-[20rem]"}>
-							<div className="font-mono text-sm" key="code">
-								<div className="leading-6 h-4"></div>
-								<div className="leading-6">
-									<span className="text-blue-300">.container</span>
-									<span className="text-gray-300"> {"{"}</span>
-								</div>
-								<div className="leading-6 pl-4 grayscale opacity-50">
-									<span className="text-violet-300">display</span>
-									<span className="text-gray-300">: </span>
-									<span className="text-emerald-300">flex</span>
-									<span className="text-gray-300">;</span>
-								</div>
-								<div className="leading-6 pl-4">
-									<span className="text-violet-300">gap</span>
-									<span className="text-gray-300">: </span>
-									<span className="text-emerald-300">
-										<CssProperty property="gap" />
-									</span>
-									<span className="text-gray-300">;</span>
-								</div>
-								<div className="leading-6 pl-4">
-									<span className="text-violet-300">flex-wrap</span>
-									<span className="text-gray-300">: </span>
-									<span className="text-emerald-300">
-										<CssProperty property="flex-wrap" />
-									</span>
-									<span className="text-gray-300">;</span>
-								</div>
-								<div className="leading-6">
-									<span className="text-gray-300">{"}"}</span>
-								</div>
-								<div className="leading-6 h-4"></div>
-							</div>
-						</FlexWidget>
+						<FlexWidget
+							codetitle="propiedad flex-wrap"
+							codeSize={"w-[20rem]"}
+							code={`
+							.container {
+    							display:flex; 
+    							gap: <-property:gap"value:10px->;
+								flex-wrap: <-property:flex-wrap"value:noWrap->;
+							}
+							`}
+						></FlexWidget>
 					</div>
 				</section>
 			</main>

@@ -8,6 +8,23 @@ body {
   box-sizing: border-box;
 }
 
+:root {
+  --color-selector: #2563eb;
+  /* Azul para selectores */
+  --color-property-editable: #8b5cf6;
+  /* Violeta brillante para propiedades editables */
+  --color-property-non-editable: #888888;
+  /* Violeta más suave para propiedades no editables */
+  --color-value-editable: #10b981;
+  /* Verde brillante para valores editables */
+  --color-value-non-editable: #97a5a0;
+  /* Verde más suave para valores no editables */
+  --color-punctuation: #d1d5db;
+  /* Gris para puntuación */
+  --color-comment: #9ca3af;
+  /* Gris más claro para comentarios */
+}
+
 
 
 @layer base {
@@ -38,11 +55,11 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --pattern-fg: hsl(var(--background));
-    --color-black:black;
+    --color-black: black;
   }
 
   .dark {
-    --color-black:black;
+    --color-black: black;
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;
     --card: 20 14.3% 4.1%;
@@ -69,7 +86,7 @@ body {
     --chart-5: 340 75% 55%;
     --pattern-fg: hsl(var(--background));
   }
-  
+
 }
 
 
@@ -78,16 +95,20 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-  .csscode{
+
+  .csscode {
     @apply font-[family-name:var(--font-geist-mono)] text-sm;
     @apply bg-orange-500/20 rounded-sm p-[1px] px-[8px] text-sm;
   }
-  .font-monocode{
+
+  .font-monocode {
     @apply font-[family-name:var(--font-geist-mono)];
   }
+
   .flex-widget-box {
     display: flex;
     flex-direction: var(--flex-flex-direction, row);
@@ -99,4 +120,3 @@ body {
 
 
 }
-

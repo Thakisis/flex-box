@@ -26,8 +26,8 @@ export default function FlexboxPage() {
 					</p>
 					<div className="p-6 space-y-4">
 						<p>
-							Flujo de bloques (block): Los s con display: block se colocan uno
-							debajo del otro.
+							Flujo de bloques (block): Los elementos con display: block se
+							colocan uno debajo del otro.
 						</p>
 						<div className="p-6 rounded-lg  max-w-md border-2 border-dashed border-gray-400 bg-orange-500/20">
 							<div className="space-y-4 [&>div]:block [&>div]:p-6 [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  m-10 bg-black font-monocode">
@@ -39,8 +39,9 @@ export default function FlexboxPage() {
 					</div>
 					<div className="p-6 space-y-4">
 						<p>
-							Flujo en línea (inline): Los s con display: inline o display:
-							inline-block se colocan uno al lado del otro en una misma línea.
+							Flujo en línea (inline): Los elementos con display: inline o
+							display: inline-block se colocan uno al lado del otro en una misma
+							línea.
 						</p>
 						<div className="p-6 rounded-lg  max-w-lg border-2 border-dashed border-gray-400 bg-orange-500/20">
 							<div className="space-x-4 [&>div]:inline-block [&>div]:p-6 [&>div]:px-16  [&>div]:bg-orange-500 [&>div]:text-center [&>div]:font-semibold [&>div]:rounded-lg  bg-black w-full font-monocode">
@@ -57,15 +58,15 @@ export default function FlexboxPage() {
 					</h2>
 
 					<p>
-						Flexbox es un sistema de diseño que permite alinear s en filas o
-						columnas, definiendo un eje de alineación principal y otro
+						Flexbox es un sistema de diseño que permite alinear los hijos en
+						filas o columnas, definiendo un eje de alineación principal y otro
 						secundario.
 						<br />
 					</p>
 					<p>
-						Esto permite que los s se alineen de manera flexible y dinámica, lo
-						cual es útil para crear interfaces de usuario (UI) adaptables a
-						diferentes tamaños y resoluciones de pantalla.
+						Esto permite que los elementos se alineen de manera flexible y
+						dinámica, lo cual es útil para crear interfaces de usuario (UI)
+						adaptables a diferentes tamaños y resoluciones de pantalla.
 					</p>
 				</section>
 				<section className="space-y-4 mb-12">
