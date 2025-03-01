@@ -36,10 +36,44 @@ export default function FlexboxPage() {
 						<code className="csscode">wrap-reverse</code>.
 					</p>
 				</section>
+				<section className="space-y-4 mb-12">
+					<h2 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+						Wrap
+					</h2>
+					<p>
+						Cuando la propiedad <code className="csscode">flex-wrap</code> se
+						establece en
+						<em className="font-bold csscode">wrap</em>, los elementos hijos se
+						ajustarán a la siguiente línea si no hay suficiente espacio en la
+						fila, en lugar de reducir su tamaño para encajar en una sola línea.
+					</p>
+
+					<h2 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+						No Wrap
+					</h2>
+					<p>
+						El valor predeterminado de{" "}
+						<code className="csscode">flex-wrap</code> es
+						<em className="font-bold csscode">nowrap</em>, lo que significa que
+						todos los elementos hijos permanecerán en una sola línea sin
+						importar su tamaño, lo que podría provocar su desbordamiento fuera
+						del contenedor.
+					</p>
+
+					<h2 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+						Wrap-Reverse
+					</h2>
+					<p>
+						Con <code className="csscode">flex-wrap</code> en
+						<em className="font-bold csscode">wrap-reverse</em>, los elementos
+						hijos se ajustarán a la siguiente línea de manera inversa, es decir,
+						las nuevas líneas se agregarán por encima en lugar de por debajo.
+					</p>
+				</section>
 				<section>
 					<div className="p-6 space-y-4">
 						<FlexWidget codetitle="propiedad flex-wrap" codeSize={"w-[20rem]"}>
-							<div className="font-mono text-sm">
+							<div className="font-mono text-sm" key="code">
 								<div className="leading-6 h-4"></div>
 								<div className="leading-6">
 									<span className="text-blue-300">.container</span>
@@ -49,6 +83,14 @@ export default function FlexboxPage() {
 									<span className="text-violet-300">display</span>
 									<span className="text-gray-300">: </span>
 									<span className="text-emerald-300">flex</span>
+									<span className="text-gray-300">;</span>
+								</div>
+								<div className="leading-6 pl-4">
+									<span className="text-violet-300">gap</span>
+									<span className="text-gray-300">: </span>
+									<span className="text-emerald-300">
+										<CssProperty property="gap" />
+									</span>
 									<span className="text-gray-300">;</span>
 								</div>
 								<div className="leading-6 pl-4">

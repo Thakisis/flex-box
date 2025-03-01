@@ -6,9 +6,11 @@ export default function FlexboxPage() {
 		<div>
 			<header className="flex items-center justify-between p-5 fixed w-full top-0 backdrop-blur-md bg-black/50">
 				<div className="flex-1">
-					<ButtonNext href="/flexbox" title="Flex-box	" direction="left" />
+					<ButtonNext href="/flex-wrap" title="Flex-wrap" direction="left" />
 				</div>
-				<h1 className="text-center text-3xl font-bold">Flexbox - gap</h1>
+				<h1 className="text-center text-3xl font-bold">
+					Flexbox - flex-direction
+				</h1>
 				<div className="flex-1 flex justify-end">
 					<ButtonNext
 						href="/flex-direction"
@@ -37,11 +39,52 @@ export default function FlexboxPage() {
 						</code>
 						.
 					</p>
+					<h2 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+						Row
+					</h2>
+					<p>
+						El valor predeterminado de la propiedad{" "}
+						<code className="csscode">flex-direction</code> es{" "}
+						<em className="font-bold csscode">row</em>, lo que significa que los
+						elementos hijos se alinearán en una fila, comenzando desde la
+						izquierda y terminando en la derecha.
+					</p>
+
+					<h2 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+						Column
+					</h2>
+					<p>
+						Al establecer <code className="csscode">flex-direction</code> en{" "}
+						<em className="font-bold csscode">column</em>, los elementos hijos
+						se alinearán en una columna, comenzando desde la parte superior y
+						terminando en la parte inferior.
+					</p>
+
+					<h2 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+						Row-Reverse
+					</h2>
+					<p>
+						Con <code className="csscode">flex-direction</code> en{" "}
+						<em className="font-bold csscode">row-reverse</em>, los elementos
+						hijos se alinearán en una fila, pero en orden inverso, comenzando
+						desde la derecha y terminando en la izquierda.
+					</p>
+
+					<h2 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+						Column-Reverse
+					</h2>
+					<p>
+						Si se utiliza <code className="csscode">flex-direction</code> con el
+						valor <em className="font-bold csscode">column-reverse</em>, los
+						elementos hijos se alinearán en una columna en orden inverso,
+						comenzando desde la parte inferior y terminando en la parte
+						superior.
+					</p>
 				</section>
 				<section>
 					<div className="p-6 space-y-4">
 						<FlexWidget codetitle="propiedad gap" codeSize={"w-[20rem]"}>
-							<div className="font-mono text-sm">
+							<div className="font-mono text-sm" key="code">
 								<div className="leading-6 h-4 "></div>
 								<div className="leading-6  ">
 									<span className="text-blue-300">.container</span>

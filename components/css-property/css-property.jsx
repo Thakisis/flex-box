@@ -4,21 +4,24 @@ import { useFlexProperties } from '@/components/flex-provider';
 import { PopoverProperty } from '@/components/popover-property';
 import { PopoverUnit } from '@/components/popover-unit';
 
-export function CssProperty({ property }) {
+export function CssProperty({ property, children }) {
+
     const components = {
         'gap': <Gap />,
         'flex-wrap': <FlexWrap />,
         'flex-direction': <FlexDirection />
     }
 
-
     return components[property] ?? <span className="text-emerald-300">{property}</span>
 }
 
+
 function Gap() {
-    const { cssVars } = useFlexProperties();
+
+    const { cssVars, updateProperty } = useFlexProperties();
     const value = cssVars[`--flex-gap`]
-    const { flexProperties, updateProperty } = useFlexProperties();
+
+
     const changeProperty = (e) => {
 
         updateProperty('gap', e)
@@ -28,6 +31,7 @@ function Gap() {
     );
 }
 function FlexWrap() {
+
     const { cssVars } = useFlexProperties();
     const value = cssVars[`--flex-flex-wrap`]
     const { flexProperties, updateProperty } = useFlexProperties();
@@ -46,7 +50,7 @@ function FlexDirection() {
 
     return (
         <div className="text-emerald-300 inline">
-            <PopoverProperty value={value} property='flex-direction' list={['inherit', 'row', 'column', 'row-reverse', 'column-reverse']} />
+            <PopoverProperty value={value} property='flex-direction' list={['row', 'column', 'row-reverse', 'column-reverse']} />
 
         </div>
     );
