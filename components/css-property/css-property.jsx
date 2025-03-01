@@ -9,7 +9,8 @@ export function CssProperty({ property, children }) {
     const components = {
         'gap': <Gap />,
         'flex-wrap': <FlexWrap />,
-        'flex-direction': <FlexDirection />
+        'flex-direction': <FlexDirection />,
+        'justify-content': <JustifyContent />
     }
 
     return components[property] ?? <span className="text-emerald-300">{property}{value}</span>
@@ -46,7 +47,7 @@ function FlexWrap() {
 function FlexDirection() {
     const { cssVars } = useFlexProperties();
     const value = cssVars[`--flex-flex-direction`]
-    const { flexProperties, updateProperty } = useFlexProperties();
+
 
     return (
         <div className="text-emerald-300 inline">
@@ -56,4 +57,17 @@ function FlexDirection() {
     );
 }
 
-//export function PopoverProperty({ value = "inherit",  }) {
+function JustifyContent() {
+    const { cssVars } = useFlexProperties();
+    const value = cssVars[`--flex-justify-content`];  // Cambié a 'justify-content'
+
+    return (
+        <div className="text-emerald-300 inline">
+            <PopoverProperty
+                value={value}
+                property='justify-content'  // Cambié 'flex-direction' a 'justify-content'
+                list={['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']}
+            />
+        </div>
+    );
+}

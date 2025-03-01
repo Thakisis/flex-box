@@ -1,7 +1,6 @@
 import { ButtonNext } from "@/components/button-next";
 import { FlexWidget } from "@/components/flex-widget";
-import { CssProperty } from "@/components/css-property";
-export default function FlexboxPage() {
+export default function FlexDirectionPage() {
 	return (
 		<div>
 			<header className="flex items-center justify-between p-5 fixed w-full top-0 backdrop-blur-md bg-black/50">
@@ -13,8 +12,8 @@ export default function FlexboxPage() {
 				</h1>
 				<div className="flex-1 flex justify-end">
 					<ButtonNext
-						href="/flex-direction"
-						title="Flex-direction"
+						href="/justify-content"
+						title="Justify-content"
 						direction="right"
 					/>
 				</div>
