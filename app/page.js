@@ -1,12 +1,10 @@
 import { SparklesCore } from "@/components/ui/sparkles";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { Link } from 'next-view-transitions'
+import { ButtonNext } from "@/components/button-next";
 export default function HomePage() {
   
 
   return (
-    
+    <>
       <div className=" w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md h-screen font-[family-name:var(--font-geist-sans)]">
       <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
         flex-box
@@ -32,10 +30,12 @@ export default function HomePage() {
         <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         
       </div>
-      <Button  className="absolute bottom-16" asChild effect="expandIcon" icon={ArrowRight} iconPlacement="right"><Link href="/flexbox">Entrar al tutorial</Link></Button>
+      
+          
           
         
     </div>
-    
+    <footer className="absolute bottom-32 w-full flex justify-center "><ButtonNext  className="" href="/flexbox" title="Entrar al tutorial" direction="right"/></footer>
+    </>
   );
 }
