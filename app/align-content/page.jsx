@@ -74,10 +74,7 @@ export default function FlexAlignContentPage() {
                             <code className="csscode">align-content</code> distribuye el espacio entre las líneas a lo largo del eje transversal,
                             similar a cómo <code className="csscode">justify-content</code> distribuye elementos en el eje principal.
                         </li>
-                        <li>
-                            Cuando se usa <code className="csscode">align-content</code>, la alineación definida por <code className="csscode">align-items</code>
-                            queda deshabilitada para dar prioridad a la distribución de las líneas.
-                        </li>
+
                         <li>
                             <code className="csscode">align-content</code> sólo tiene efecto cuando hay múltiples líneas
                             (<code className="csscode">flex-wrap: wrap</code>) y hay espacio extra en el eje transversal.
