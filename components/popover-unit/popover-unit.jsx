@@ -32,7 +32,7 @@ export function PopoverUnit({ value = "10px", onChange }) {
     return (
         <Popover align="end">
             <PopoverTrigger className="hover:text-orange-500 hover:underline">
-                {value}
+                {value}<span className="text-white"> ; </span>
             </PopoverTrigger>
             <PopoverContent align="start" sideOffset={5} className="bg-[#1c1c1e] w-fit p-0 outline-1 outline-white/20 rounded-xs">
                 <div className="flex">
