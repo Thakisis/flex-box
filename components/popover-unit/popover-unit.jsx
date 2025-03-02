@@ -3,7 +3,7 @@
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
-import { Input } from "@/components/ui/input";
+
 import { splitunit } from '@/lib/utils';
 
 const units = ['px', 'rem', 'em', '%', 'vw', 'vh'];

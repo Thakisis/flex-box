@@ -123,7 +123,12 @@ body {
 
   .toEditable {
     &:has(.pluscircle:hover) {
-      @apply bg-white/20;
+      @apply bg-orange-500/10;
+
+      &::before {
+        content: "";
+        @apply absolute top-0 left-0 w-[2px] h-full bg-orange-500 z-10;
+      }
 
     }
   }
