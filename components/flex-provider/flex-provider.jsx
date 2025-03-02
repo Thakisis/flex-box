@@ -1,31 +1,32 @@
 "use client"
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { generateInitialState } from "@/lib/utils";
 const FlexContext = createContext(null);
 
 
-export function FlexProvider({ children, initialValues = {} }) {
+export function FlexProvider({ children, css }) {
 
-  const defaultValues = {
-
-    flexDirection: 'row',
-    gap: '10px',
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
-    flexWrap: 'nowrap',
-    ...initialValues
-  };
-
-
-  const [flexProperties, setFlexProperties] = useState(defaultValues);
-
+  const [flexProperties, setFlexProperties] = useState(generateInitialState(css));
+  const [cssProps, setCssProps] = useState(css);
+  const [isUpdateCode, setIsUpdateCode] = useState(false);
 
   const updateProperty = (property, value) => {
+    console.log("*************")
+    console.log(property, value)
+    console.log("*************")
     setFlexProperties(prev => ({
       ...prev,
       [property]: value
     }));
   };
+
+
+  const activateProperty = (property) => {
+    setCssProps(prev => prev.map(prop => prop.property === property ? { ...prop, type: "edit" } : prop))
+    setIsUpdateCode(true)
+
+  }
 
 
   // Create CSS variable style object
@@ -35,9 +36,12 @@ export function FlexProvider({ children, initialValues = {} }) {
     acc[`--flex-${cssVarName}`] = value;
     return acc;
   }, {});
-
+  console.log(cssVars)
   const contextValue = {
     flexProperties,
+    cssProps,
+    isUpdateCode,
+    activateProperty,
     updateProperty,
     cssVars
   };
@@ -54,6 +58,6 @@ export function FlexProvider({ children, initialValues = {} }) {
 
 export function useFlexProperties() {
   const context = useContext(FlexContext);
-
   return context;
 }
+

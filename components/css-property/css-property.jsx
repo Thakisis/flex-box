@@ -10,7 +10,8 @@ export function CssProperty({ property, children }) {
         'gap': <Gap />,
         'flex-wrap': <FlexWrap />,
         'flex-direction': <FlexDirection />,
-        'justify-content': <JustifyContent />
+        'justify-content': <JustifyContent />,
+        'align-items': <AlignItems />
     }
 
     return components[property] ?? <span className="text-emerald-300">{property}{value}</span>
@@ -67,6 +68,20 @@ function JustifyContent() {
                 value={value}
                 property='justify-content'  // Cambié 'flex-direction' a 'justify-content'
                 list={['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']}
+            />
+        </div>
+    );
+}
+
+function AlignItems() {
+    const { cssVars } = useFlexProperties();
+    const value = cssVars[`--flex-align-items`]
+    return (
+        <div className="text-emerald-300 inline">
+            <PopoverProperty
+                value={value}
+                property='align-items'
+                list={['flex-start', 'flex-end', 'center', 'baseline', 'stretch']}
             />
         </div>
     );

@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 export function PopoverNamed({ value, property, selected, hover, children }) {
     const { cssVars, updateProperty } = useFlexProperties();
     const valueSelected = cssVars[`--flex-${property}`]
-    console.log(valueSelected, value)
+
     const isSelected = valueSelected === value;
 
     return (

@@ -1,9 +1,15 @@
+"use client"
 import { CSSHighlighter } from "./code-formater";
+import { generateCSSFromArray } from "@/lib/utils";
 import { cn } from '@/lib/utils';
-export function CodeSnippet({ code, children, codeTitle, codeSize }) {
-    //const componentChildren = children ? children : <CSSHighlighter code={code} />
+import { useFlexProperties } from "../flex-provider";
+export function CodeSnippet({ children, codeTitle, codeSize, css }) {
 
-    const componentChildren = <CSSHighlighter code={code} />
+    const { cssProps, isUpdateCode } = useFlexProperties()
+
+    const code = generateCSSFromArray(".container", cssProps)
+
+    const componentChildren = isUpdateCode ? <CSSHighlighter code={code} /> : children
     return (
         <div className={cn("flex max-w-2xl my-8 ", codeSize)}>
             <div className="rounded-lg overflow-hidden  border border-zinc-800 w-full">

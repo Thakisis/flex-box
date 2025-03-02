@@ -1,7 +1,7 @@
 import { ButtonNext } from "@/components/button-next";
 import { FlexWidget } from "@/components/flex-widget";
-
-export default function FlexboxPage() {
+import { cssProps } from "@/constants/flex-boxes";
+export default function FlexJustifyContentPage() {
 	return (
 		<div>
 			<header className="flex items-center justify-between p-5 fixed w-full top-0 backdrop-blur-md bg-black/50">
@@ -16,11 +16,7 @@ export default function FlexboxPage() {
 					Flexbox - justify-content
 				</h1>
 				<div className="flex-1 flex justify-end">
-					<ButtonNext
-						href="/flex-direction"
-						title="Flex-direction"
-						direction="right"
-					/>
+					<ButtonNext href="/flex-items" title="Flex Items" direction="right" />
 				</div>
 			</header>
 
@@ -105,19 +101,13 @@ export default function FlexboxPage() {
 				<section>
 					<div className="p-6 space-y-4">
 						<FlexWidget
-							flexClass={"w-3/4 max-w-none"}
+							defaultSize={{
+								width: "70vw",
+							}}
 							flexCount={4}
 							codetitle="Propiedad justify-content"
 							codeSize={"w-[20rem]"}
-							code={`
-								.container {
-    								display: flex; 
-									gap: <-property:gap"value:10px->;
-									flex-wrap: <-property:flex-wrap"value:noWrap->;
-									flex-direction: <-property:flex-direction"value:row->;
-    								justify-content: <-property:justify-content"value:flex-start->;
-								}
-							`}
+							css={cssProps["justify-content"]}
 						></FlexWidget>
 					</div>
 				</section>

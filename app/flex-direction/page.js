@@ -1,5 +1,6 @@
 import { ButtonNext } from "@/components/button-next";
 import { FlexWidget } from "@/components/flex-widget";
+import { cssProps } from "@/constants/flex-boxes";
 export default function FlexDirectionPage() {
 	return (
 		<div>
@@ -83,16 +84,13 @@ export default function FlexDirectionPage() {
 				<section>
 					<div className="p-6 space-y-4">
 						<FlexWidget
+							defaultSize={{
+								width: "800px",
+							}}
 							codetitle="propiedad gap"
 							codeSize={"w-[20rem]"}
-							code={`
-								.container {
-    							display:flex; 
-    							gap: <-property:gap"value:10px->;
-								flex-wrap: <-property:flex-wrap"value:noWrap->;
-								flex-direction: <-property:flex-direction"value:row->;
-							}
-							`}
+							flexCount={3}
+							css={cssProps["flex-direction"]}
 						></FlexWidget>
 					</div>
 				</section>

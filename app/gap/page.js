@@ -1,6 +1,6 @@
 import { ButtonNext } from "@/components/button-next";
 import { FlexWidget } from "@/components/flex-widget";
-
+import { cssProps } from "@/constants/flex-boxes";
 export default function GapPage() {
 	return (
 		<div>
@@ -32,15 +32,13 @@ export default function GapPage() {
 				<section>
 					<div className="p-6 space-y-4">
 						<FlexWidget
+							defaultSize={{
+								width: "500px",
+								height: "100px",
+							}}
 							codetitle="propiedad gap"
 							codeSize={"w-[15rem]"}
-							code={`
-								/* Click en las propiedades
-								coloreadas para editarlas */
-							.container {
-    							display:flex; 
-    							gap: <-property:gap"value:210px->;
-							}`}
+							css={cssProps.gap}
 						></FlexWidget>
 					</div>
 				</section>

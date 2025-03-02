@@ -1,6 +1,6 @@
 import { ButtonNext } from "@/components/button-next";
 import { FlexWidget } from "@/components/flex-widget";
-
+import { cssProps } from "@/constants/flex-boxes";
 export default function FlexWrapPage() {
 	return (
 		<div>
@@ -72,15 +72,13 @@ export default function FlexWrapPage() {
 				<section>
 					<div className="p-6 space-y-4">
 						<FlexWidget
+							defaultSize={{
+								width: "500px",
+							}}
 							codetitle="propiedad flex-wrap"
 							codeSize={"w-[20rem]"}
-							code={`
-							.container {
-    							display:flex; 
-    							gap: <-property:gap"value:10px->;
-								flex-wrap: <-property:flex-wrap"value:noWrap->;
-							}
-							`}
+							css={cssProps["flex-wrap"]}
+							flexCount={7}
 						></FlexWidget>
 					</div>
 				</section>

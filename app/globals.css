@@ -15,9 +15,9 @@ body {
   /* Violeta brillante para propiedades editables */
   --color-property-non-editable: #888888;
   /* Violeta más suave para propiedades no editables */
-  --color-value-editable: #10b981;
+  --color-value-editable: #f33333;
   /* Verde brillante para valores editables */
-  --color-value-non-editable: #97a5a0;
+  --color-value-non-editable: #c4c4c4;
   /* Verde más suave para valores no editables */
   --color-punctuation: #d1d5db;
   /* Gris para puntuación */
@@ -103,6 +103,7 @@ body {
   .csscode {
     @apply font-[family-name:var(--font-geist-mono)] text-sm;
     @apply bg-orange-500/20 rounded-sm p-[1px] px-[8px] text-sm;
+    @apply text-orange-300;
   }
 
   .font-monocode {
@@ -116,7 +117,14 @@ body {
     justify-content: var(--flex-justify-content, flex-start);
     align-items: var(--flex-align-items, stretch);
     flex-wrap: var(--flex-flex-wrap, nowrap);
+
   }
 
+  .toEditable {
+    &:has(.pluscircle:hover) {
+      @apply bg-white/20;
+
+    }
+  }
 
 }
