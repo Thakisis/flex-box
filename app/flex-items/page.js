@@ -115,14 +115,26 @@ export default function FlexItemsPage() {
 						automático (<code className="csscode">flex-basis: auto</code>).
 					</p>
 				</section>
-
+				<section className="space-y-4">
+					<h3 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+						Instrucciones de uso del elemento hijo de flex
+					</h3>
+					<p>
+						Hacer click sobre el elemento hijo de flex abrira un cuadro para
+						cambiar algunas de sus propiedades.
+					</p>
+					<p>
+						En el Hijo ademas de su numero se muestra a la izquierda 3
+						triangulos
+					</p>
+				</section>
 				<section>
 					<div className="p-6 space-y-4">
 						<FlexWidget
 							flexClass={"w-3/4 max-w-none"}
 							flexCount={4}
 							codetitle="Propiedades de elementos flexibles"
-							codeSize={"w-[20rem]"}
+							codeSize={"w-[23rem]"}
 							css={cssProps["justify-content"]}
 							flexItems={true}
 							showAlignSelf={false}

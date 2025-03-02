@@ -7,17 +7,13 @@ export default function FlexAlignItemsPage() {
 		<div>
 			<header className="flex items-center justify-between p-5 fixed w-full top-0 backdrop-blur-md bg-black/50">
 				<div className="flex-1">
-					<ButtonNext
-						href="/justify-content"
-						title="Justify-content"
-						direction="left"
-					/>
+					<ButtonNext href="/flex-items" title="flex items" direction="left" />
 				</div>
 				<h1 className="text-center text-3xl font-bold">
-					Flexbox - Propiedades de alineación
+					Flexbox - align-items
 				</h1>
 				<div className="flex-1 flex justify-end">
-					<ButtonNext href="/flex-items" title="flex items" direction="right" />
+					<ButtonNext href="/align-items" title="todo" direction="right" />
 				</div>
 			</header>
 
@@ -79,7 +75,7 @@ export default function FlexAlignItemsPage() {
 							}}
 							flexCount={6}
 							codetitle="Alineación de elementos flexibles"
-							codeSize={"w-[20rem]"}
+							codeSize={"w-[23rem]"}
 							css={cssProps["align-items"]}
 							flexItems={true}
 							showAlignSelf={true}

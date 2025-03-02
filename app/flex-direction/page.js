@@ -88,7 +88,7 @@ export default function FlexDirectionPage() {
 								width: "800px",
 							}}
 							codetitle="propiedad gap"
-							codeSize={"w-[20rem]"}
+							codeSize={"w-[23rem]"}
 							flexCount={3}
 							css={cssProps["flex-direction"]}
 						></FlexWidget>

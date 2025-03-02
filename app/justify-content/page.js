@@ -106,7 +106,7 @@ export default function FlexJustifyContentPage() {
 							}}
 							flexCount={4}
 							codetitle="Propiedad justify-content"
-							codeSize={"w-[20rem]"}
+							codeSize={"w-[23rem]"}
 							css={cssProps["justify-content"]}
 						></FlexWidget>
 					</div>
