@@ -5,7 +5,7 @@ import { cssProps } from "@/constants/flex-boxes";
 export default function FlexAlignItemsPage() {
 	return (
 		<div>
-			<header className="flex items-center justify-between p-5 fixed w-full top-0 backdrop-blur-md bg-black/50">
+			<header className="flex items-center justify-between p-5 fixed w-full top-0 backdrop-blur-md bg-black/50 z-50">
 				<div className="flex-1">
 					<ButtonNext href="/flex-items" title="flex items" direction="left" />
 				</div>
@@ -13,7 +13,7 @@ export default function FlexAlignItemsPage() {
 					Flexbox - align-items
 				</h1>
 				<div className="flex-1 flex justify-end">
-					<ButtonNext href="/align-items" title="todo" direction="right" />
+					<ButtonNext href="/align-items" title="to do" direction="right" />
 				</div>
 			</header>
 

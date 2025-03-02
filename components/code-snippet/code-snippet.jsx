@@ -11,7 +11,7 @@ export function CodeSnippet({ children, codeTitle, codeSize, css }) {
 
     const componentChildren = isUpdateCode ? <CSSHighlighter code={code} /> : children
     return (
-        <div className={cn("flex max-w-2xl my-8 ", codeSize)}>
+        <div className={cn("flex max-w-2xl my-8 z-10", codeSize)}>
             <div className="rounded-lg overflow-hidden  border border-zinc-800 w-full">
                 {/* Darker chrome that matches macOS dark mode */}
                 <div className="w-full flex justify-between align-center bg-[#2a2a2c]/9 backdrop-blur-xl px-3 py-2 border-b border-zinc-800">

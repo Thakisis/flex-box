@@ -59,7 +59,7 @@ export default function FlexWrapPage() {
 						del contenedor.
 					</p>
 
-					<h2 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+					<h2 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2 z-50">
 						Wrap-Reverse
 					</h2>
 					<p>

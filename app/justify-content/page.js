@@ -4,7 +4,7 @@ import { cssProps } from "@/constants/flex-boxes";
 export default function FlexJustifyContentPage() {
 	return (
 		<div>
-			<header className="flex items-center justify-between p-5 fixed w-full top-0 backdrop-blur-md bg-black/50">
+			<header className="flex items-center justify-between p-5 fixed w-full top-0 backdrop-blur-md bg-black/50 z-50">
 				<div className="flex-1">
 					<ButtonNext
 						href="/flex-direction"
