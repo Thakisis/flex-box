@@ -7,9 +7,9 @@ export function PopoverProperty({ value = "row", property = 'flex-direction', li
 
     return (
         <Popover align="end" >
-            <PopoverTrigger className="hover:text-orange-500 hover:underline">
+            <PopoverTrigger className="">
 
-                {value}<span className="text-white"> ; </span>
+                <span className=" hover:underline  decoration-orange-500 decoration-[2px] underline-offset-[3px]">{value}</span><span className="text-white"> ; </span>
             </PopoverTrigger>
             <PopoverContent align="start" sideOffset={5} className="w-fit p-0 outline-1 outline-white/20 rounded-xs">
 
