@@ -154,7 +154,7 @@ function FlexChildren({ index, showAlignSelf = false }) {
                     className={`group min-w-[100px] flex items-center p-8 ${hasCustomValues ? "bg-orange-500" : "bg-orange-400"
                         } text-white text-center font-semibold rounded-lg hover:bg-orange-600 transition-colors`}
                 >
-                    <div className="flex items-center justify-between w-full gap-4">
+                    <div className="flex items-center justify-center w-full gap-4">
                         <FlexIndicator value={grow} maxValue={MAX_FLEX_VALUE} type="grow" />
                         <div className="flex flex-col items-center">
                             <span className="text-2xl">{String(index + 1).replace(/^(\d)$/, " $1")}</span>
