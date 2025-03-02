@@ -12,9 +12,7 @@ export function FlexProvider({ children, css }) {
   const [isUpdateCode, setIsUpdateCode] = useState(false);
 
   const updateProperty = (property, value) => {
-    console.log("*************")
-    console.log(property, value)
-    console.log("*************")
+
     setFlexProperties(prev => ({
       ...prev,
       [property]: value
@@ -36,7 +34,7 @@ export function FlexProvider({ children, css }) {
     acc[`--flex-${cssVarName}`] = value;
     return acc;
   }, {});
-  console.log(cssVars)
+
   const contextValue = {
     flexProperties,
     cssProps,

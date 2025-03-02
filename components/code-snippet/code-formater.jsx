@@ -117,7 +117,7 @@ export function CSSHighlighter({ code }) {
       }
       return (token.type === "component" ? token.content : <div key={j} className='inline'> <span className={getTokenColor(token.type, token.editable)}>{token.content}</span></div>)
     })
-    console.log(line)
+
     return (<div key={i} className={`relative  toEditable leading-6 w-full ${line.isEmpty ? "h-4" : ""} ${line.indentClass}`} style={{ paddingLeft: line.lineIndent * 2 + "rem" }}>
       {tokensRendered}
       {lineEditable && <EditableButton property={editableProperty} />}

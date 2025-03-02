@@ -21,7 +21,7 @@ export function FlexBox({ flexClass, flexCount = 6, flexItems, showAlignSelf, de
   })
 
   const finalChildren = flexItems ? childrenList2 : childrenList
-  console.log(defaultSize)
+
   return (
 
     <Resizable
@@ -44,7 +44,7 @@ export function FlexBox({ flexClass, flexCount = 6, flexItems, showAlignSelf, de
       className={cn("p-6 rounded-lg border-2 border-dashed border-gray-400 bg-orange-500/20 ")}
     >
       <div
-        className="flex gap-4 w-full  h-full min-w-0  bg-black font-monocode flex-widget-box"
+        className="flex  w-full  h-full min-w-0  bg-black font-monocode flex-widget-box"
 
       >
         {finalChildren}
