@@ -64,23 +64,50 @@ function CssDisplay({ flex, isExpanded, onToggle, index }) {
 
 function FlexIndicator({ value, maxValue, type }) {
     const shapes = Array.from({ length: maxValue }, (_, i) => {
-        const isFilled = i < value
+        const isFilled = i < value;
 
         if (type === "grow") {
             return (
-                <div
+                <svg
                     key={i}
-                    className={`w-0 h-0 border-[6px] border-transparent border-r-[12px] ${isFilled ? "border-r-white" : "border-r-white/30"
-                        }`}
-                />
-            )
+                    width="13"
+                    height="13"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <polygon
+                        points="12,2 22,22 2,22"
+                        fill={isFilled ? "white" : "transparent"}
+                        stroke="white"
+                        strokeWidth="1"
+                    />
+                </svg>
+            );
         }
 
-        return <div key={i} className={`w-3 h-3 rounded-full ${isFilled ? "bg-white" : "border-2 border-white/30"}`} />
-    })
+        return (
+            <svg
+                key={i}
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    fill={isFilled ? "white" : "transparent"}
+                    stroke="white"
+                    strokeWidth="1"
+                />
+            </svg>
+        );
+    });
 
-    return <div className={`flex gap-1 ${type === "grow" ? "flex-col" : "flex-col-reverse"}`}>{shapes}</div>
+    return <div className="flex gap-1 flex-col-reverse">{shapes}</div>;
 }
+
 
 function FlexChildren({ index, showAlignSelf = false }) {
     const [flex, setFlex] = useState({

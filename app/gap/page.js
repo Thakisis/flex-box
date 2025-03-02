@@ -29,6 +29,22 @@ export default function GapPage() {
 						<code className="csscode">%</code>...
 					</p>
 				</section>
+				<section className="space-y-4">
+					<h3 className="text-xl underline decoration-wavy decoration-1 decoration-orange-500 underline-offset-[3px] font-bold mb-2">
+						Instrucciones de Uso del cuadro de codigo y de la caja flex-box
+					</h3>
+					<p>
+						Las propiedades en color podran ser cambiadas haciando click sobre
+						ellas. Aquellas propiedades que esten en color gris no pueden ser
+						cambiadas. Pero si tienen un icono de un circulo con un + en su
+						interior podran ser activadas presionando el icono
+					</p>
+					<p>
+						Para cambiar el tamaño de la caja flex-box situando el cursor sobre
+						el borde derecho, el inferior o la esquina inferior derecha y
+						tirando de ellos.
+					</p>
+				</section>
 				<section>
 					<div className="p-6 space-y-4">
 						<FlexWidget
@@ -39,7 +55,13 @@ export default function GapPage() {
 							codetitle="propiedad gap"
 							codeSize={"w-[15rem]"}
 							css={cssProps.gap}
-						></FlexWidget>
+						>
+							<p>
+								Puede cambiar el tamaño de la caja flex-box situando el cursor
+								sobre el borde derecho, el inferior o la esquina inferior
+								derecha y tirando de ellos.
+							</p>
+						</FlexWidget>
 					</div>
 				</section>
 			</main>
