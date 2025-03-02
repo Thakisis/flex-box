@@ -127,6 +127,15 @@ export default function FlexItemsPage() {
 						En el Hijo ademas de su numero se muestra a la izquierda 3
 						triangulos
 					</p>
+					<p>
+						para comprobar el efecto de flex-shrink es recomendable poner
+						flex-wrap: nowrap ya que si no se pone, el contenido fluira de
+						manera vertical.
+						<br />
+						En el caso de flex-grow es recomendable usar flex-wrap: wrap o que
+						el contenedor se mas grande para ver como reparte el espacio
+						disponible.
+					</p>
 				</section>
 				<section>
 					<div className="p-6 space-y-4">
