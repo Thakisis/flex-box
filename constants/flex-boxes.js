@@ -36,6 +36,6 @@ export const cssProps = {
 		{ property: "flex-direction", value: "row", type: "switch" },
 		{ property: "justify-content", value: "center", type: "switch" },
 		{ property: "align-items", value: "center", type: "switch" },
-		{ property: "align-content", value: "center", type: "edit" },
+		{ property: "align-content", value: "stretch", type: "edit" },
 	],
 };

@@ -117,6 +117,7 @@ body {
     justify-content: var(--flex-justify-content, flex-start);
     align-items: var(--flex-align-items, stretch);
     flex-wrap: var(--flex-flex-wrap, nowrap);
+    align-content: var(--flex-align-content, stretch);
 
   }
 

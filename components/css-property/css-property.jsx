@@ -11,7 +11,8 @@ export function CssProperty({ property, children }) {
         'flex-wrap': <FlexWrap />,
         'flex-direction': <FlexDirection />,
         'justify-content': <JustifyContent />,
-        'align-items': <AlignItems />
+        'align-items': <AlignItems />,
+        'align-content': <AlignContent />
     }
 
     return components[property] ?? <span className="text-emerald-300">{property}{value}</span>
@@ -82,6 +83,19 @@ function AlignItems() {
                 value={value}
                 property='align-items'
                 list={['flex-start', 'flex-end', 'center', 'baseline', 'stretch']}
+            />
+        </div>
+    );
+}
+function AlignContent() {
+    const { cssVars } = useFlexProperties();
+    const value = cssVars[`--flex-align-content`]
+    return (
+        <div className="text-emerald-300 inline">
+            <PopoverProperty
+                value={value}
+                property='align-content'
+                list={['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly', 'stretch']}
             />
         </div>
     );

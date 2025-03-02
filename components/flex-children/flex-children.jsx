@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Slider } from "@/components/ui/slider"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { RefreshCw, Code } from "lucide-react"
-
+import { AlignSelfIndicator } from "./Align-icons"
 function CssDisplay({ flex, isExpanded, onToggle, index }) {
     const formatFlexValue = () => {
         if (isExpanded) {
@@ -155,13 +155,18 @@ function FlexChildren({ index, showAlignSelf = false }) {
                         } text-white text-center font-semibold rounded-lg hover:bg-orange-600 transition-colors`}
                 >
                     <div className="flex items-center justify-center w-full gap-4">
+
                         <FlexIndicator value={grow} maxValue={MAX_FLEX_VALUE} type="grow" />
                         <div className="flex flex-col items-center">
+
                             <span className="text-2xl">{String(index + 1).replace(/^(\d)$/, " $1")}</span>
                             <span className="text-xs opacity-80 mt-1">{basis}</span>
+
+
                         </div>
                         <FlexIndicator value={shrink} maxValue={MAX_FLEX_VALUE} type="shrink" />
                     </div>
+                    <div></div>
                 </button>
             </PopoverTrigger>
             <PopoverContent align="start" className="w-64 p-3" onOpenAutoFocus={(e) => e.preventDefault()}>

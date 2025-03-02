@@ -13,7 +13,11 @@ export default function FlexAlignItemsPage() {
 					Flexbox - align-items
 				</h1>
 				<div className="flex-1 flex justify-end">
-					<ButtonNext href="/align-items" title="to do" direction="right" />
+					<ButtonNext
+						href="/align-content"
+						title="Align Content"
+						direction="right"
+					/>
 				</div>
 			</header>
 
